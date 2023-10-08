@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ***** header style ***** */
+
+/* NAV */
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: url("../assets/img/pexels-eberhard-grossgasteiger-1421903.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a.homeReturn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+header a.homeReturn div.fName span {
+  opacity: 0.4;
+  font-size: 45px;
+  letter-spacing: -6px;
+}
+
+header a.homeReturn div.fName span:nth-child(1),
+header a.homeReturn div.fName span:nth-child(2) {
+  opacity: 1;
+}
+
+header a.homeReturn div.fName span:nth-child(3),
+header a.homeReturn div.fName span:nth-child(4) {
+  opacity: 0.8;
+}
+
+header a.homeReturn div.fName span:nth-child(5),
+header a.homeReturn div.fName span:nth-child(6) {
+  opacity: 0.6;
+}
+
+header a.homeReturn div.role {
+  margin-left: 8px;
+  font-size: calc(10.5 / 30 * 45px);
+  opacity: 0.2;
+}
+
+header a.homeReturn div.role div:nth-child(1) {
+  position: relative;
+  top: 4px;
+}
+
+@media screen and (max-width: 575px) {
+  header a.homeReturn {
+    flex-direction: column;
+    transform: scale(0.8);
+    margin-left: -28px;
+  }
+
+  header a.homeReturn div.role div:nth-child(1) {
+    display: none;
+  }
+  header a.homeReturn div.role div:nth-child(2) {
+    margin-top: -14px;
+    font-size: 1.45em;
+  }
+}
+
+header ul.linkList {
+  display: flex;
+  list-style: none;
+  color: white;
+}
+
+header ul.linkList li a {
+  text-decoration: none;
+  color: white;
+}
+
+header ul.linkList li.active a {
+  text-decoration: underline;
+}
+
+header ul.linkList li::after {
+  content: "-";
+  margin: 0 10px;
+}
+
+header ul.linkList li:last-child::after {
+  content: "";
+}
+
+header nav .hamburgerMenu {
+  color: white;
+  font-size: 1.8em;
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  header nav ul.linkList {
+    display: none;
+  }
+  header nav .hamburgerMenu {
+    display: block;
+  }
+}
+
+header .carousel {
+  width: 100%;
+  height: 80%;
+  margin-top: 30px;
+}
+
+header .carousel .carousel-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header .carousel .carousel-item div {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+header .carousel .carousel-item div h1 {
+  font-size: 5vw;
+}
+
+@media screen and (min-width: 1200px) {
+  header .carousel .carousel-item div h1 {
+    font-size: 4em;
+  }
+}
