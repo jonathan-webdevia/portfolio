@@ -1,6 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+
+  /* ***** color var ***** */
+  --grey: #24292e;
+  --greyDarker1: #1c2024;
+}
+
+main {
+  background-color: var(--grey);
 }
 
 /* ***** header style ***** */
@@ -143,5 +151,127 @@ header .carousel .carousel-item div h1 {
 @media screen and (min-width: 1200px) {
   header .carousel .carousel-item div h1 {
     font-size: 4em;
+  }
+}
+
+/* ***** presentation ***** */
+#presentation {
+  padding: 50px 10%;
+}
+#presentation > div {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  color: white;
+}
+
+#presentation::after {
+  content: "";
+  display: block;
+  width: 80vw;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 50px auto;
+}
+
+#presentation h1 {
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 5px;
+}
+
+#presentation img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 80px;
+  background-color: rgb(202, 190, 190);
+}
+
+#presentation p {
+  text-align: justify;
+  font-size: 0.9em;
+}
+
+@media screen and (max-width: 992px) {
+  #presentation {
+    padding: 50px 5%;
+  }
+}
+@media screen and (max-width: 575px) {
+  #presentation > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* ***** techno used section ***** */
+#technoUsed {
+  padding: 0 5% 40px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+}
+
+#technoUsed::after {
+  content: "";
+  display: block;
+  width: 80vw;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 50px auto;
+}
+
+#technoUsed img {
+  height: 90px;
+}
+
+#technoUsed div p {
+  text-align: center;
+  padding: 20px;
+}
+
+#technoUsed div.logo {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#technoUsed div.front {
+  width: 50%;
+}
+
+#technoUsed .front .frontLogo {
+  display: flex;
+  justify-content: space-around;
+}
+
+#technoUsed .front .frontLogo .htmlCss img {
+  height: 70px;
+}
+
+#technoUsed .front .frontLogo .htmlCss img:nth-child(2) {
+  position: relative;
+  top: 20px;
+  left: -20px;
+}
+
+@media screen and (max-width: 992px) {
+  #technoUsed {
+    padding: 0 10% 40px 10%;
+  }
+  #technoUsed div.front {
+    width: 100%;
+  }
+  #technoUsed div.logo {
+    width: 50%;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #technoUsed {
+    padding: 0 5% 40px 5%;
   }
 }
