@@ -1,0 +1,84 @@
+{
+  "titrePro": [
+    {
+      "name": "Développeur WEB et WEB mobile",
+      "img": "CPDWWM20231010.png",
+      "organisme": "POP SCHOOL",
+      "date": "31/03/2023",
+      "keySkills": [
+        {
+          "keySkill": "HTML & CSS",
+          "lvl": "95%"
+        },
+        {
+          "keySkill": "PHP",
+          "lvl": "80%"
+        },
+        {
+          "keySkill": "SQL",
+          "lvl": "80%"
+        },
+        {
+          "keySkill": "POO & MVC",
+          "lvl": "75%"
+        }
+      ]
+    }
+  ],
+  "MOOC": [
+    {
+      "mooc": "Simplifiez-vous le CSS avec Sass",
+      "img": "SCAS20231010.png",
+      "keySkills": [
+        {
+          "keySkill": "SASS & SCSS"
+        }
+      ]
+    },
+    {
+      "mooc": "Gérez du code avec Git et GitHub",
+      "img": "GCGG20231010.png",
+      "keySkills": [
+        {
+          "keySkill": "Git & Github"
+        }
+      ]
+    },
+    {
+      "mooc": "Devenez développeur agile",
+      "img": "DDA20231010.png",
+      "keySkills": [
+        {
+          "keySkill": "Les évènement SCRUM"
+        },
+        {
+          "keySkill": "Les outils et méthode agiles"
+        },
+        {
+          "keySkill": "Préparation des sprint"
+        }
+      ]
+    },
+    {
+      "mooc": "Découvrez le fonctionnement des algorhitmes",
+      "img": "DFA20231010.png",
+      "keySkills": [
+        {
+          "keySkill": "Algorithmie & pseudo-code"
+        },
+        {
+          "keySkill": "Test JSBENCH"
+        }
+      ]
+    },
+    {
+      "mooc": "Gérez du code avec Git et GitHub",
+      "img": "GCGG20231010.png",
+      "keySkills": [
+        {
+          "keySkill": "Git & Github"
+        }
+      ]
+    }
+  ]
+}
