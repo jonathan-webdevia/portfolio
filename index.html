@@ -16,7 +16,7 @@
 
   <body>
     <header>
-      <nav>
+      <nav class="position-relative">
         <a href="" class="homeReturn">
           <div class="fName">
             <span>J</span>
@@ -34,14 +34,15 @@
           </div>
         </a>
         <ul class="linkList">
-          <li class="active"><a href="">Acceuil</a></li>
           <li><a href="#presentation">A propos</a></li>
           <li><a href="">Portfolio</a></li>
           <li><a href="">Contact</a></li>
         </ul>
 
         <!-- create hamburger menu for mobile display -->
-        <i class="fa-solid fa-bars hamburgerMenu"></i>
+        <button type="button" id="hamburgerMenu" data-deployed="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </nav>
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">

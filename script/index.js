@@ -19,4 +19,22 @@ const init = async () => {
   certifDisplayer(certifList, moocList);
 };
 
+/* ***** mobil menu controller ***** */
+const mobilMenuController = () => {
+  /* ***** DOM's elmts ***** */
+  const hamburgerMenuIcon = document.querySelector("#hamburgerMenu");
+  const linkList = document.querySelector("header nav ul.linkList");
+
+  hamburgerMenuIcon.addEventListener("click", () => {
+    if (hamburgerMenuIcon.dataset.deployed === "false") {
+      hamburgerMenuIcon.dataset.deployed = true;
+      linkList.classList.add("active");
+    } else {
+      hamburgerMenuIcon.dataset.deployed = false;
+      linkList.classList.remove("active");
+    }
+  });
+};
+
+mobilMenuController();
 init();
