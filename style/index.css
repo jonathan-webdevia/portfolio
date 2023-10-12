@@ -156,7 +156,7 @@ header .carousel .carousel-item div h1 {
 
 /* ***** presentation ***** */
 #presentation {
-  padding: 50px 10%;
+  padding: 50px 10% 0 10%;
 }
 #presentation > div {
   display: flex;
@@ -195,7 +195,7 @@ header .carousel .carousel-item div h1 {
 
 @media screen and (max-width: 992px) {
   #presentation {
-    padding: 50px 5%;
+    padding: 50px 5% 0 5%;
   }
 }
 @media screen and (max-width: 575px) {
@@ -222,55 +222,33 @@ header .carousel .carousel-item div h1 {
   margin: 50px auto;
 }
 
-#technoUsed img {
+#technoUsed div.logoContainer {
+  width: 100%;
+}
+
+#technoUsed div.logoContainer .icon {
+  width: calc(100% / 8);
+  display: flex;
+  justify-content: center;
+}
+
+#technoUsed div img {
   height: 90px;
 }
 
-#technoUsed div p {
-  text-align: center;
-  padding: 20px;
-}
-
-#technoUsed div.logo {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#technoUsed div.front {
-  width: 50%;
-}
-
-#technoUsed .front .frontLogo {
-  display: flex;
-  justify-content: space-around;
-}
-
-#technoUsed .front .frontLogo .htmlCss img {
-  height: 70px;
-}
-
-#technoUsed .front .frontLogo .htmlCss img:nth-child(2) {
-  position: relative;
-  top: 20px;
-  left: -20px;
-}
-
-@media screen and (max-width: 992px) {
-  #technoUsed {
-    padding: 0 10%;
-  }
-  #technoUsed div.front {
-    width: 100%;
-  }
-  #technoUsed div.logo {
-    width: 50%;
-    margin-top: 40px;
+@media screen and (max-width: 991.99px) {
+  #technoUsed div.logoContainer .icon {
+    width: calc(100% / 4);
   }
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767.99px) {
+  #technoUsed div.logoContainer .icon {
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 575.1px) {
   #technoUsed {
     padding: 0 5%;
   }
