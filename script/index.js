@@ -28,10 +28,12 @@ const mobilMenuController = () => {
   hamburgerMenuIcon.addEventListener("click", () => {
     if (hamburgerMenuIcon.dataset.deployed === "false") {
       hamburgerMenuIcon.dataset.deployed = true;
+      linkList.classList.remove("unActive");
       linkList.classList.add("active");
     } else {
       hamburgerMenuIcon.dataset.deployed = false;
       linkList.classList.remove("active");
+      linkList.classList.add("unActive");
     }
   });
 };

@@ -91,11 +91,17 @@ header ul.linkList {
   display: flex;
   list-style: none;
   color: white;
+  position: relative;
+  z-index: 100;
+}
+
+header ul.linkList li {
+  display: block;
 }
 
 header ul.linkList li a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
 
 header ul.linkList li.active a {
@@ -122,28 +128,47 @@ header nav #hamburgerMenu {
 
 @media screen and (max-width: 768px) {
   header nav ul.linkList {
-    display: none;
+    display: flex;
     width: 80%;
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
     position: absolute;
     top: 110px;
     right: calc(-80% - 24px);
-    padding: 10px 0 10px 30px;
+    padding: 10px 0 10px 15px;
     border-radius: 30px 0 0 30px;
     gap: 10px;
   }
+  header nav ul.linkList.unActive {
+    animation: unDeployMenu 1s forwards;
+  }
   header nav ul.linkList.active {
-    display: flex;
+    animation: deployMenu 1s forwards;
   }
   header nav ul.linkList li {
-    padding: 10px 20px;
+    display: block;
+    padding: 5px 15px;
     border-radius: 5px;
-    background-color: green;
+    border: 2px solid #0495BC;
+    color: #61DAFC
+  }
+  header nav ul.linkList li a {
+    color: #61DAFC;
   }
   header nav ul.linkList li:first-child {
-    padding: 10px 20px;
     border-radius: 22px 5px 5px 22px;
-    background-color: green;
+    border: 2px solid #5B4282;
+    color: #A08AC4;
+  }
+  header nav ul.linkList li:first-child a {
+    color: #A08AC4;
+  }
+  header nav ul.linkList li:last-child {
+    border: 2px solid #548235;
+    color: #A9D18E;
+  }
+  header nav ul.linkList li:last-child a {
+    color: #A9D18E;
   }
   header nav ul.linkList li::after {
     content: "";
@@ -154,23 +179,63 @@ header nav #hamburgerMenu {
   }
 }
 
-@keyframes identifier {
-  
+@keyframes deployMenu {
+  from {
+    right: calc(-80%- 24px);
+  }
+  to {
+    right: -20px;
+  }
+}
+
+@keyframes unDeployMenu {
+  from {
+    right: -20px;
+  }
+  to {
+    right: calc(-80%- 24px);
+  }
 }
 
 @media screen and (max-width: 500px) {
   header nav ul.linkList {
-    width: 100%;
+    width: calc(100% + 20px);
+    right: calc(-100% - 40px);
+    gap: 10px;
+    padding: 10px 0 10px 20px;
+  }
+  header nav ul.linkList li {
+    padding: 5px 10px;
+  }
+  header nav ul.linkList.unActive {
+    animation: unDeployMenuXS 1s forwards;
+  }
+  header nav ul.linkList.active {
+    animation: deployMenuXS 1s forwards;
   }
 }
 
-@media screen and (max-width: 400px) {
-  header nav ul.linkList {
-    width: calc(100% + 40px);
+@keyframes deployMenuXS {
+  from {
+    right: calc(-100% - 40px);
+  }
+  to {
+    right: -20px;
+  }
+}
+
+@keyframes unDeployMenuXS {
+  from {
+    right: -20px;
+  }
+  to {
+    right: calc(-100% - 40px);
   }
 }
 
 header .carousel {
+  position: relative;
+  z-index: 90;
   width: 100%;
   height: 80%;
   margin-top: 30px;
