@@ -1,6 +1,5 @@
 export const getJsonData = async () => {
-  let certifList = null;
-  let moocList = null;
+  let certificate = null;
 
   return fetch("./data/data.json")
     .then((response) => {
@@ -10,8 +9,7 @@ export const getJsonData = async () => {
       return response.json();
     })
     .then((data) => {
-      certifList = data.titrePro;
-      moocList = data.MOOC;
-      return { certifList, moocList };
+      certificate = data.certif;
+      return certificate;
     });
 };

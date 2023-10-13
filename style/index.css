@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "anton";
+  src: url('../assets/font/Anton-Regular.ttf') format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,12 +42,12 @@ header a.homeReturn {
   align-items: center;
   text-decoration: none;
   color: white;
+  font-family: anton;
 }
 
 header a.homeReturn div.fName span {
   opacity: 0.4;
   font-size: 45px;
-  letter-spacing: -6px;
 }
 
 header a.homeReturn div.fName span:nth-child(1),
@@ -62,20 +67,15 @@ header a.homeReturn div.fName span:nth-child(6) {
 
 header a.homeReturn div.role {
   margin-left: 8px;
-  font-size: calc(10.5 / 30 * 45px);
+  font-size: calc(13 / 30 * 45px);
+  line-height: 24px;
   opacity: 0.2;
-}
-
-header a.homeReturn div.role div:nth-child(1) {
-  position: relative;
-  top: 4px;
 }
 
 @media screen and (max-width: 768px) {
   header a.homeReturn {
     flex-direction: column;
     transform: scale(0.8);
-    margin-left: -28px;
   }
 
   header a.homeReturn div.role div:nth-child(1) {
@@ -83,7 +83,8 @@ header a.homeReturn div.role div:nth-child(1) {
   }
   header a.homeReturn div.role div:nth-child(2) {
     margin-top: -14px;
-    font-size: 1.45em;
+    margin-left: -8px;
+    font-size: 22px;
   }
 }
 
@@ -118,6 +119,8 @@ header ul.linkList li:last-child::after {
 }
 
 header nav #hamburgerMenu {
+  position: relative;
+  z-index: 101;
   color: white;
   font-size: 1.8em;
   display: none;
@@ -138,12 +141,11 @@ header nav #hamburgerMenu {
     padding: 10px 0 10px 15px;
     border-radius: 30px 0 0 30px;
     gap: 10px;
-  }
-  header nav ul.linkList.unActive {
-    animation: unDeployMenu 1s forwards;
+    transition: 1000ms;
   }
   header nav ul.linkList.active {
-    animation: deployMenu 1s forwards;
+    right: calc(-20px);
+    transition: 1000ms;
   }
   header nav ul.linkList li {
     display: block;
@@ -179,23 +181,6 @@ header nav #hamburgerMenu {
   }
 }
 
-@keyframes deployMenu {
-  from {
-    right: calc(-80%- 24px);
-  }
-  to {
-    right: -20px;
-  }
-}
-
-@keyframes unDeployMenu {
-  from {
-    right: -20px;
-  }
-  to {
-    right: calc(-80%- 24px);
-  }
-}
 
 @media screen and (max-width: 500px) {
   header nav ul.linkList {
@@ -203,33 +188,13 @@ header nav #hamburgerMenu {
     right: calc(-100% - 40px);
     gap: 10px;
     padding: 10px 0 10px 20px;
+    transition: 500ms;
   }
   header nav ul.linkList li {
     padding: 5px 10px;
   }
-  header nav ul.linkList.unActive {
-    animation: unDeployMenuXS 1s forwards;
-  }
   header nav ul.linkList.active {
-    animation: deployMenuXS 1s forwards;
-  }
-}
-
-@keyframes deployMenuXS {
-  from {
-    right: calc(-100% - 40px);
-  }
-  to {
     right: -20px;
-  }
-}
-
-@keyframes unDeployMenuXS {
-  from {
-    right: -20px;
-  }
-  to {
-    right: calc(-100% - 40px);
   }
 }
 
@@ -458,4 +423,20 @@ header .carousel .carousel-item div h1 {
   #certif h1 {
     font-size: 1.4em;
   }
+}
+
+/* ***** lightbox section ***** */
+#lightbox {
+  position: relative;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 102;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }

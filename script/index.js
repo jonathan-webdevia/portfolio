@@ -1,22 +1,43 @@
 import { getJsonData } from "./utils/getJsonData.js";
-import { certifTemplate, moocTemplate } from "./templates/certif.js";
+import { Templates } from "./templates/Templates.js";
+import { lightboxFunc } from "./functions/lightbox.js";
 
-const certifDisplayer = async (certifList, moocList) => {
+/* ***** utils var ***** */
+let certificateList = [];
+
+const certifDisplayer = async (certificate) => {
   /* ***** DOM's elmts ***** */
   const container = document.querySelector("#certif .items");
 
-  certifList.forEach((certif) => {
-    container.appendChild(certifTemplate(certif));
-  });
+  const templates = new Templates();
 
-  for (let index = 0; index < 6 - certifList.length; index++) {
-    container.appendChild(moocTemplate(moocList[index]));
+  for (let index = 0; index < 6; index++) {
+    container.appendChild(templates.certifTemplate(certificate[index]));
+    certificateList.push(certificate[index]);
   }
 };
 
+const lightBoxController = async (listElmt) => {
+  /* ***** DOM's elmts ***** */
+  const lightbox = document.querySelector("#lightbox");
+
+  listElmt.forEach((article) => {
+    article.addEventListener("click", () => {
+      const index = certificateList.findIndex(
+        (data) => data.id === article.dataset.id
+      );
+      lightboxFunc(certificateList, index);
+      lightbox.style.display = "flex";
+    });
+  });
+};
+
 const init = async () => {
-  const { certifList, moocList } = await getJsonData();
-  certifDisplayer(certifList, moocList);
+  const certificate = await getJsonData();
+  certifDisplayer(certificate);
+
+  const certifList = document.querySelectorAll("article.certifList");
+  lightBoxController(certifList);
 };
 
 /* ***** mobil menu controller ***** */
@@ -28,12 +49,10 @@ const mobilMenuController = () => {
   hamburgerMenuIcon.addEventListener("click", () => {
     if (hamburgerMenuIcon.dataset.deployed === "false") {
       hamburgerMenuIcon.dataset.deployed = true;
-      linkList.classList.remove("unActive");
       linkList.classList.add("active");
     } else {
       hamburgerMenuIcon.dataset.deployed = false;
       linkList.classList.remove("active");
-      linkList.classList.add("unActive");
     }
   });
 };

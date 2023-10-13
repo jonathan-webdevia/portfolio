@@ -40,9 +40,11 @@
         </ul>
 
         <!-- create hamburger menu for mobile display -->
-        <button type="button" id="hamburgerMenu" data-deployed="false">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+        <i
+          class="fa-solid fa-bars"
+          id="hamburgerMenu"
+          data-deployed="false"
+        ></i>
       </nav>
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
@@ -167,9 +169,14 @@
         <h1>Titres pro et certificats de réussite (MOOC)</h1>
         <br />
         <div class="items"></div>
-        <a href="">En voir plus...</a>
+        <a href="./titrePro.html">En voir plus...</a>
       </section>
       <br /><br /><br /><br />
+      <section id="lightbox">
+          <button class="previousBtn"><-</button>
+          <div class="lightboxContainer"></div>
+          <button class="nextBtn">-></button>
+      </section>
     </main>
     <footer></footer>
     <script type="module" src="./script/index.js"></script>
