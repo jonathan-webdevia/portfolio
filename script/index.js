@@ -20,6 +20,8 @@ const certifDisplayer = async (certificate) => {
 const lightBoxController = async (listElmt) => {
   /* ***** DOM's elmts ***** */
   const lightbox = document.querySelector("#lightbox");
+  const lightboxh1 = document.querySelector("#lightbox h1");
+  const closeLightbox = document.querySelector("#lightbox .closeBtn");
 
   listElmt.forEach((article) => {
     article.addEventListener("click", () => {
@@ -28,7 +30,12 @@ const lightBoxController = async (listElmt) => {
       );
       lightboxFunc(certificateList, index);
       lightbox.style.display = "flex";
+      lightboxh1.focus();
     });
+  });
+
+  closeLightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
   });
 };
 

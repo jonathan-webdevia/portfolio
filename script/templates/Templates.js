@@ -12,7 +12,7 @@ export class Templates {
     const h2 = document.createElement("h2");
 
     if (item.certificate) {
-      h2.textContent = item.titrepro;
+      h2.textContent = item.certificate;
     } else if (item.mooc) {
       h2.textContent = item.mooc;
     }
