@@ -425,6 +425,42 @@ header .carousel .carousel-item div h1 {
   }
 }
 
+/* ***** contact section ***** */
+#contact::after {
+  content: "";
+  display: block;
+  width: 80vw;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 50px auto;
+}
+
+#contact h1 {
+  font-size: 1.6em;
+}
+
+#contact a {
+  text-decoration: none;
+  color: white;
+  margin: 0 20px;
+}
+
+#contact button {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 30px;
+  font-size: 1.2em;
+  background-color: rgb(227, 128, 128);
+  color: white;
+  font-weight: bolder;
+  transition: 500ms;
+}
+
+#contact button:hover {
+  transform: scale(1.1);
+  transition: 500ms;
+}
+
 /* ***** lightbox section ***** */
 #lightbox {
   position: relative;
@@ -498,13 +534,13 @@ header .carousel .carousel-item div h1 {
   border: none;
   font-size: 3em;
   color: white;
-  transition: 500ms
+  transition: 500ms;
 }
 
 #lightbox button:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: 500ms
+  transition: 500ms;
 }
 
 #lightbox .lightboxContainer {
