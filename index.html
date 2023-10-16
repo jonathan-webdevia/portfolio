@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <header>
+    <header id="home">
       <nav class="position-relative">
         <a href="" class="homeReturn">
           <div class="fName">
@@ -36,7 +36,7 @@
         <ul class="linkList">
           <li><a href="#presentation">A propos</a></li>
           <li><a href="">Portfolio</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
 
         <!-- create hamburger menu for mobile display -->
@@ -122,7 +122,7 @@
         <div>
           <div>
             <img src="./assets/img/profilPic.png" alt="photo de profil" /><br />
-            <h1 class="py-5">
+            <h1>
               Développeur <br />
               <i>fullstack</i>
             </h1>
@@ -171,23 +171,50 @@
         <div class="items"></div>
         <a href="./titrePro.html">En voir plus...</a>
       </section>
-      <section id="contact" class="pt-5">
-        <h1 class="text-center text-white py-3">Un petit échange ?</h1>
-        <div class="d-flex flex-column flex-md-row align-items-center">
-          <div class="d-flex flex-column align-items-center align-items-md-end col-12 col-md-6">
+      <section id="contact" class="pt-3">
+        <h1 class="text-center text-white py-4">Un petit échange ?</h1>
+        <div class="d-flex flex-column flex-md-row align-items-center mb-3">
+          <div
+            class="d-flex flex-column align-items-center align-items-md-end col-12 col-md-6"
+          >
             <a href="tel:+33686615862">&#9742; : +336.86.61.58.62</a>
             <a href="mailto:jonathan.lauer.contact@gmail.com">
               &#9993; : jonathan.lauer.contact@gmail.com
             </a>
-            <a href="">Linkedin</a>
+            <a
+              href="https://www.linkedin.com/in/jonathanlauer
+            "
+              target="_blank"
+              >Linkedin</a
+            >
           </div>
           <div class="col-12 col-md-6 mt-4 mt-md-0">
-            <button class="btn btn-danger d-block m-auto m-md-0">Contactez-moi</button>
+            <a
+              class="btn btn-danger m-auto m-md-0"
+              href="mailto:jonathan.lauer.contact@gmail.com"
+              >Contactez-moi</a
+            >
           </div>
         </div>
-        <br /><br /><br />
       </section>
-      <footer>plein de trucs ici !!!</footer>
+
+      <footer class="d-flex justify-content-between">
+        <nav>
+          <ul>
+            <li><a href="#home">Acceuil</a></li>
+            <li><a href="#presentation">A propos</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a
+          href="./assets/LAUER_JONATHAN--CV.pdf"
+          download
+          class="btn btn-danger"
+          >Mon CV !</a
+        >
+      </footer>
+
       <section id="lightbox">
         <div class="closeBtn"><i class="fa-solid fa-door-open"></i></div>
         <h1>ceci est un titre</h1>
@@ -203,12 +230,14 @@
         <div class="skills"></div>
       </section>
     </main>
-    <footer></footer>
+
     <script type="module" src="./script/index.js"></script>
+
     <script
       src="https://kit.fontawesome.com/c0100ccffa.js"
       crossorigin="anonymous"
     ></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
